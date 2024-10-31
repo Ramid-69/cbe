@@ -1,11 +1,12 @@
 
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cbe/widgets/cbe_card.dart';
-import 'package:cbe/widgets/grid_content.dart';
-import 'package:cbe/widgets/home_app_bar.dart';
-import 'package:cbe/widgets/image_slider_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+import 'package:cbe/widgets/cbe_card.dart';
+import 'package:cbe/widgets/grid_content.dart';
+import 'package:cbe/widgets/home_screen_app_bar.dart';
+import 'package:cbe/widgets/image_slider_indicator.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -48,11 +49,15 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 const HomeAppBar(),
+                const Divider(
+                  color: Colors.white,
+                  thickness: 0.2,
+                ),
                 const CbeCard(),
                 Expanded(
                   flex: 3,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
+                    padding: const EdgeInsets.only(top: 20.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
@@ -71,11 +76,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 label: 'QUICK ACCESS',
                               ),
                               const SmallHeader(
-                                label: 'Transacion Detail',
+                                label: 'Transaction Detail',
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 doesItHaveIcon: true,
                               ),
-                               GridContent(),
+                              GridContent(),
                               const SizedBox(
                                 height: 30,
                               ),
@@ -92,9 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   return Builder(
                                     builder: (BuildContext context) {
                                       return Container(
-                                        // height: 150,
-                                        width:
-                                            MediaQuery.of(context).size.width,
+                                        width: MediaQuery.of(context).size.width,
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 10.0),
                                         decoration: const BoxDecoration(
@@ -115,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -129,42 +132,6 @@ class _HomeScreenState extends State<HomeScreen> {
           color: Colors.white,
         ),
       ),
-    );
-  }
-}
-
-class SmallHeader extends StatelessWidget {
-  final String label;
-  final MainAxisAlignment mainAxisAlignment;
-  final bool doesItHaveIcon;
-
-  const SmallHeader({
-    super.key,
-    required this.label,
-    this.mainAxisAlignment = MainAxisAlignment.start,
-    this.doesItHaveIcon = false,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: mainAxisAlignment,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 12,
-            color: Colors.purple,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        doesItHaveIcon
-            ? const Icon(
-                Icons.arrow_right,
-                color: Colors.purple,
-              )
-            : const SizedBox()
-      ],
     );
   }
 }

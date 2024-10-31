@@ -1,11 +1,11 @@
+
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:cbe/widgets/balance.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CardContent extends StatelessWidget {
-  const CardContent({
-    super.key,
-  });
+  const CardContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,10 @@ class CardContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image(
-                image: AssetImage('assets/images/cbe_logo.jpg'),
+                image: AssetImage('assets/images/cbe.png'),
                 width: 50,
               ),
+               SizedBox(width: 10,),
               Text(
                 'የኢትዮጵያ ንግድ ባንክ\nCommercial Bank of Ethiopia',
                 textAlign: TextAlign.center,
@@ -29,9 +30,7 @@ class CardContent extends StatelessWidget {
                   fontSize: 12,
                 ),
               ),
-              SizedBox(
-                width: 50,
-              )
+              SizedBox(width: 50),
             ],
           ),
           Column(
@@ -47,7 +46,7 @@ class CardContent extends StatelessWidget {
                         color: Colors.yellow,
                       ),
                       Text(
-                        '  +2519459065**',
+                        '  +251960994***',
                         style: TextStyle(
                           color: Colors.yellow,
                           fontSize: 10,
@@ -80,11 +79,12 @@ class CardContent extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 15,),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Balance(
-                label: 'Balance',
+                label: 'Balance (ETB)',
                 alignment: CrossAxisAlignment.start,
               ),
               Balance(
@@ -92,47 +92,7 @@ class CardContent extends StatelessWidget {
                 alignment: CrossAxisAlignment.end,
               ),
             ],
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class Balance extends StatelessWidget {
-  final String label;
-  final CrossAxisAlignment alignment;
-  const Balance({
-    super.key,
-    required this.label,
-    required this.alignment,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: alignment,
-        children: [
-          Text(label,
-              style: const TextStyle(color: Colors.white, fontSize: 13)),
-          const SizedBox(
-            height: 7,
           ),
-          const Row(
-            children: [
-              Text(
-                'ETB ',
-                style: TextStyle(color: Colors.white, fontSize: 13),
-              ),
-              Text(
-                '****** ',
-                style: TextStyle(color: Colors.white, fontSize: 13),
-              ),
-              Icon(FontAwesomeIcons.eyeSlash, color: Colors.white, size: 13)
-            ],
-          )
         ],
       ),
     );

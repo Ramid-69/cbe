@@ -36,11 +36,9 @@ class _LoginAuthScreenState extends State<LoginAuthScreen> {
             Navigator.pop(context); // Navigate back to the previous screen
           },
         ),
-        title: const Text('Login'),
-        centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 36),
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 36),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,

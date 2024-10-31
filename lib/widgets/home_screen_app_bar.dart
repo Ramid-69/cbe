@@ -20,19 +20,12 @@ class HomeAppBar extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        'assets/images/cbeb_logo.jpg',
-                        // width: 100,
-                        scale: 9,
+                        'assets/images/cbe_birr_logo.jpg',
+                        width: 40,
+                        scale: 0.6,
                       ),
                     ),
                   ),
@@ -49,7 +42,7 @@ class HomeAppBar extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'ባሉበት ሁሉ አለ',
+                        'ባሉበት ሁሉ አለ!',
                         style: TextStyle(
                           color: Colors.yellow,
                           fontSize: 10,
@@ -71,7 +64,10 @@ class HomeAppBar extends StatelessWidget {
             ),
           )
         ],
+        
       ),
+      
     );
+    
   }
 }
