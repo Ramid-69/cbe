@@ -1,4 +1,5 @@
 
+import 'package:cbe/widgets/small_header.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       child: SingleChildScrollView(
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 30, 15, 0),
+                          padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
                           child: Column(
                             children: [
                               const SmallHeader(

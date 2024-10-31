@@ -7,24 +7,24 @@ class GridContent extends StatelessWidget {
   // Define grid icons and labels
   final List<IconData> gridIcons = [
     FontAwesomeIcons.house,
-    FontAwesomeIcons.creditCard,
+    FontAwesomeIcons.moneyBillTransfer,
     FontAwesomeIcons.buildingColumns,
-    FontAwesomeIcons.grip,
-    FontAwesomeIcons.elementor,
-    FontAwesomeIcons.mugSaucer,
-    FontAwesomeIcons.book,
-    FontAwesomeIcons.calendar
+    FontAwesomeIcons.phone,
+    FontAwesomeIcons.moneyBill,
+    FontAwesomeIcons.wifi,
+    FontAwesomeIcons.calendarDays,
+    FontAwesomeIcons.wandMagic  
   ];
 
   final List<String> gridLabel = [
-    "Home",
-    "Payments",
-    "Banking",
-    "Settings",
-    "Menu",
-    "Coffee",
-    "Library",
-    "Calendar"
+    "Linked Bank Account",
+    "Send Money",
+    "To CBE Account",
+    "Airtime",
+    "Cash Out",
+    "Airtime Package",
+    "Scheduled Pay",
+    "MagicPay"
   ];
 
   @override
@@ -37,7 +37,7 @@ class GridContent extends StatelessWidget {
         crossAxisCount: 4,
         mainAxisSpacing: 20,
         crossAxisSpacing: 15,
-        childAspectRatio: 1.3,
+        childAspectRatio: 0.8,
       ),
       itemBuilder: (context, index) {
         return Container(
@@ -53,21 +53,26 @@ class GridContent extends StatelessWidget {
               ),
             ],
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(
-                gridIcons[index],
-                color: const Color.fromRGBO(143, 39, 143, 1),
-              ),
-              Text(
-                gridLabel[index],
-                style: const TextStyle(
-                  fontSize: 11,
-                  fontWeight: FontWeight.bold,
+          child: SingleChildScrollView( 
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  gridIcons[index],
+                  color: const Color.fromRGBO(143, 39, 143, 1),
+                  size: 24, // Adjust icon size as needed
                 ),
-              ),
-            ],
+                const SizedBox(height: 8),
+                Text(
+                  gridLabel[index],
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 10, // Adjust text size to fit
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },

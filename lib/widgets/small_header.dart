@@ -22,7 +22,7 @@ class SmallHeader extends StatelessWidget {
           label,
           style: const TextStyle(
             fontSize: 12,
-            color: Colors.purple,
+            color: Color.fromARGB(255, 95, 12, 110),
             fontWeight: FontWeight.w500,
           ),
         ),
