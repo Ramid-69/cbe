@@ -1,4 +1,4 @@
-
+import 'package:cbe/widgets/grid_content_after_image.dart';
 import 'package:cbe/widgets/small_header.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -8,7 +8,6 @@ import 'package:cbe/widgets/cbe_card.dart';
 import 'package:cbe/widgets/grid_content.dart';
 import 'package:cbe/widgets/home_screen_app_bar.dart';
 import 'package:cbe/widgets/image_slider_indicator.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -87,7 +86,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               CarouselSlider(
                                 options: CarouselOptions(
-                                  aspectRatio: 39 / 9,
+                                  aspectRatio: 4 /
+                                      1, // Adjusted for a wider image, reducing height
+                                  viewportFraction:
+                                      1.0, // Ensures one full-width image at a time
                                   onPageChanged: (index, reason) {
                                     setState(() {
                                       _currentIndex = index;
@@ -98,12 +100,27 @@ class _HomeScreenState extends State<HomeScreen> {
                                   return Builder(
                                     builder: (BuildContext context) {
                                       return Container(
-                                        width: MediaQuery.of(context).size.width,
+                                        width:
+                                            MediaQuery.of(context).size.width,
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 10.0),
                                         decoration: const BoxDecoration(
-                                            color: Colors.transparent),
-                                        child: Image(image: AssetImage(image)),
+                                          color: Colors.transparent,
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(
+                                              8.0), // Optional rounded corners
+                                          child: Image.asset(
+                                            image,
+                                            fit: BoxFit
+                                                .cover, // Ensures the image fills the width
+                                            height:
+                                                120, // Reduced height for the image
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
+                                          ),
+                                        ),
                                       );
                                     },
                                   );
@@ -112,7 +129,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               ImageSliderIndicator(
                                 carouselImages: carouselImages,
                                 currentIndex: _currentIndex,
-                              )
+                              ),
+                               GridContentAfterImage(),
+                               const SizedBox(height: 90,),
                             ],
                           ),
                         ),

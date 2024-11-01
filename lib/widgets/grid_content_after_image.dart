@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class GridContent extends StatelessWidget {
-  GridContent({super.key});
+class GridContentAfterImage extends StatelessWidget {
+  GridContentAfterImage({super.key});
 
-  // List of grid items with both icon and label defined together
+  // Define a list of maps for each item with "text" and "icon" keys
   final List<Map<String, dynamic>> gridItems = [
-    {"text": "Linked Bank Acct", "icon": FontAwesomeIcons.house},
-    {"text": "Send Money", "icon": FontAwesomeIcons.moneyBillTransfer},
-    {"text": "To CBE Acct", "icon": FontAwesomeIcons.buildingColumns},
-    {"text": "Air Time", "icon": FontAwesomeIcons.phone},
-    {"text": "Cash Out", "icon": FontAwesomeIcons.moneyBill},
-    {"text": "Airtime Package", "icon": FontAwesomeIcons.wifi},
-    {"text": "Scheduled Pay", "icon": FontAwesomeIcons.calendarDays},
-    {"text": "MagicPay", "icon": FontAwesomeIcons.wandMagic},
+    {"text": "Other Bank Transfer", "icon": FontAwesomeIcons.moneyBillTransfer},
+    {"text": "Other Wallet Transfer", "icon": FontAwesomeIcons.wallet},
+    {"text": "Quick Pay", "icon": FontAwesomeIcons.bolt},
+    {"text": "Fuel Pay", "icon": FontAwesomeIcons.gasPump},
+    {"text": "Condoinium Repayment", "icon": FontAwesomeIcons.building},
+    {"text": "Money Request", "icon": FontAwesomeIcons.dollarSign},
+    {"text": "Location", "icon": FontAwesomeIcons.locationDot},
+    {"text": "Play and Win", "icon": FontAwesomeIcons.trophy},
   ];
 
   @override
@@ -44,7 +44,7 @@ class GridContent extends StatelessWidget {
           ),
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(6.0),
+              padding: const EdgeInsets.all(5.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

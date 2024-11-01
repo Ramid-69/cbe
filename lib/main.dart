@@ -1,5 +1,6 @@
 
 import 'package:cbe/screens/login_screen.dart';
+import 'package:cbe/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      home: const MainScreen(),
     );
   }
 }
