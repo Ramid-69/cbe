@@ -33,12 +33,12 @@ class GridContent extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
-            boxShadow: [
+            boxShadow: const[
               BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
+                color:Color.fromRGBO(128, 128, 128, 51), // Equivalent to Colors.grey.withOpacity(0.2)
                 spreadRadius: 2,
                 blurRadius: 3,
-                offset: const Offset(0, 1),
+                offset: Offset(0, 1),
               ),
             ],
           ),

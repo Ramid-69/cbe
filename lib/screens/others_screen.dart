@@ -10,7 +10,7 @@ class OthersScreen extends StatefulWidget {
 class _OthersScreenState extends State<OthersScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(child: Text("others")),
     );
   }

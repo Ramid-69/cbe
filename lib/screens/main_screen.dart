@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.white.withOpacity(0.9), // Adjusted to avoid transparency issues
+        backgroundColor: const Color.fromRGBO(255, 255, 255, 229), 
         color: const Color.fromRGBO(143, 39, 143, 1),
         height: 60,
         index: _currentIndex,
