@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedWelcomeText extends StatefulWidget {
-  const AnimatedWelcomeText({Key? key}) : super(key: key);
+  const AnimatedWelcomeText({super.key});
 
   @override
   State<AnimatedWelcomeText> createState() => _AnimatedWelcomeTextState();
@@ -33,8 +33,8 @@ class _AnimatedWelcomeTextState extends State<AnimatedWelcomeText>
         alignment: Alignment.centerLeft,
         child: SlideTransition(
           position: Tween<Offset>(
-            begin: Offset(0.9, 0.0), // Start from right off-screen
-            end: Offset(-0.9, 0.0), // End left off-screen
+            begin: const Offset(0.9, 0.0), // Start from right off-screen
+            end: const Offset(-0.9, 0.0), // End left off-screen
           ).animate(_controller),
           child: const Text(
             'Welcome to CBE Birr Plus App!',
