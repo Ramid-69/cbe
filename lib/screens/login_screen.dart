@@ -16,15 +16,16 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           Positioned.fill(
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [
-                    const Color.fromARGB(255, 71, 2, 83).withOpacity(0.99),
-                    Colors.white.withOpacity(0.1),
+                
+                     Color.fromARGB(252, 71, 2, 83),
+                     Color.fromARGB(25, 255, 255, 255), 
                   ],
-                  stops: const[0.0, 0.5],
+                  stops:  [0.0, 0.5],
                 ),
               ),
             ),
