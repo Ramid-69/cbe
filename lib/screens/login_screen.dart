@@ -21,7 +21,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [
-                
                      Color.fromARGB(252, 71, 2, 83),
                      Color.fromARGB(25, 255, 255, 255), 
                   ],

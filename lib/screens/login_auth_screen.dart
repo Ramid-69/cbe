@@ -72,9 +72,8 @@ class _LoginAuthScreenState extends State<LoginAuthScreen> {
               outlineBorderRadius: 8,
               onCompleted: (pin) {
                 if (pin == "1111") {
-                  _navigateToHomeScreen(context); // Navigate to HomeScreen if PIN is correct
+                  _navigateToHomeScreen(context); 
                 } else {
-                  // Show error if PIN is incorrect
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text("Incorrect PIN, try again")),
                   );

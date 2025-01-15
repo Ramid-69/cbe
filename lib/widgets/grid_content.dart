@@ -24,7 +24,7 @@ class GridContent extends StatelessWidget {
       itemCount: gridItems.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
-        mainAxisSpacing: 10,
+        mainAxisSpacing: 12,
         crossAxisSpacing: 10,
         childAspectRatio: 1,
       ),
@@ -44,7 +44,7 @@ class GridContent extends StatelessWidget {
           ),
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(6.0),
+              padding: const EdgeInsets.all(5.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
