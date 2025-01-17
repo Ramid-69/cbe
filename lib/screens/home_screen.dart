@@ -1,3 +1,4 @@
+import 'package:cbe/utils/constants.dart';
 import 'package:cbe/widgets/grid_content_after_image.dart';
 import 'package:cbe/widgets/small_header.dart';
 import 'package:flutter/material.dart';
@@ -49,8 +50,8 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 const HomeAppBar(),
-                const Divider(
-                  color: Colors.white,
+                 Divider(
+                  color: Constants.white,
                   thickness: 0.2,
                 ),
                 const CbeCard(),

@@ -7,6 +7,7 @@ class HomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(
         left: 15,
@@ -24,7 +25,7 @@ class HomeAppBar extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'assets/images/cbe_birr_logo.jpg',
-                        width: 40,
+                        width: media.width * 0.1,
                         scale: 0.6,
                       ),
                     ),
@@ -35,7 +36,7 @@ class HomeAppBar extends StatelessWidget {
                   const Column(
                     children: [
                       Text(
-                        'CBEBirr',
+                        'CBEBirr Plus',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
@@ -45,8 +46,8 @@ class HomeAppBar extends StatelessWidget {
                         'ባሉበት ሁሉ አለ!',
                         style: TextStyle(
                           color: Colors.yellow,
-                          fontSize: 10,
-                          // fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
@@ -64,10 +65,7 @@ class HomeAppBar extends StatelessWidget {
             ),
           )
         ],
-        
       ),
-      
     );
-    
   }
 }

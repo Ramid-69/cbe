@@ -9,6 +9,7 @@ class CbeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size;
     return Flexible(
       flex: 0,
       child: Stack(
@@ -16,11 +17,12 @@ class CbeCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 8, right: 8, top: 3),
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.9,
-              height: MediaQuery.of(context).size.height * 0.30,
+              width: media.width * 0.9,
+              height: media.height * 0.26,
               decoration: const BoxDecoration(
-                borderRadius:  BorderRadius.all(Radius.circular(15)),
-                color:  Color.fromRGBO(114, 17, 114, 1), // Purple background color
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                color:
+                    Color.fromRGBO(114, 17, 114, 1), // Purple background color
               ),
               child: const CardContent(),
             ),
