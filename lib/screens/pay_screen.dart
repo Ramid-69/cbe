@@ -14,7 +14,7 @@ class _PayScreenState extends State<PayScreen> {
       "index": "1",
       "name": "Pay Bill",
       "about": "To pay your school, entertainment, and government utilities",
-      "icon": FontAwesomeIcons.receipt, // Use IconData type, not a string
+      "icon": FontAwesomeIcons.receipt,
     },
     {
       "index": "2",
@@ -31,19 +31,21 @@ class _PayScreenState extends State<PayScreen> {
     {
       "index": "4",
       "name": "Water Supply",
-      "about": "To close your monthly water consumption bill",
+      "about":
+          "To close your monthly household water consumption, use this section",
       "icon": FontAwesomeIcons.droplet,
     },
     {
       "index": "5",
       "name": "Telecom",
-      "about": "To pay monthly or yearly telecom usage bills",
+      "about": "To pay month,daily or yearly telecoms, use this section",
       "icon": FontAwesomeIcons.phone,
     },
     {
       "index": "6",
       "name": "Fundraising",
-      "about": "Donate to help those in need or support non-profits",
+      "about":
+          "Donate,give to those who have no one.Help non-profit organizations to flourish",
       "icon": FontAwesomeIcons.handHoldingHeart,
     },
   ];
@@ -63,8 +65,8 @@ class _PayScreenState extends State<PayScreen> {
           ),
         ),
         backgroundColor: const Color.fromRGBO(143, 39, 143, 1),
-        actions: const[
-           Padding(
+        actions: const [
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Center(
               child: Text(
@@ -143,7 +145,7 @@ class _PayScreenState extends State<PayScreen> {
                                 ),
                               ),
                               const SizedBox(width: 15),
-                              // Column for the name and about text
+
                               Expanded(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,36 +155,29 @@ class _PayScreenState extends State<PayScreen> {
                                       mObj["name"] ?? "",
                                       style: const TextStyle(
                                         color: Colors.black,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:
-                                            4), // Add some space between the name and about
-                                    // Text for the about description
+                                    const SizedBox(height: 4),
                                     Text(
                                       mObj["about"] ?? "",
                                       style: const TextStyle(
-                                        color: Colors
-                                            .black, // Use a lighter color for better readability
-                                        fontSize: 10,
+                                        color: Color.fromARGB(255, 73, 73, 73),
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
+                              const SizedBox(width: 15),
+                              const Icon(
+                                Icons.arrow_forward_ios,
+                                size: 18,
+                                color: Colors.purple,
+                              ),
                             ],
-                          ),
-                        ),
-                        // Positioned arrow outside the main container
-                        const Positioned(
-                          right: 10,
-                          top: 32,
-                          child: Icon(
-                            Icons.arrow_forward_ios,
-                            size: 18,
-                            color: Colors.purple,
                           ),
                         ),
                       ],

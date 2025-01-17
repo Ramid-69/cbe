@@ -160,8 +160,8 @@ class _CbeBejeScreenState extends State<CbeBejeScreen> {
                                       mObj["name"] ?? "",
                                       style: const TextStyle(
                                         color: Colors.black,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
                                     const SizedBox(height: 4),
@@ -170,23 +170,18 @@ class _CbeBejeScreenState extends State<CbeBejeScreen> {
                                       mObj["about"] ?? "",
                                       style: const TextStyle(
                                         color: Colors.black,
-                                        fontSize: 10,
+                                        fontSize: 12,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
+                              const Icon(
+                                Icons.arrow_forward_ios,
+                                size: 18,
+                                color: Colors.purple,
+                              ),
                             ],
-                          ),
-                        ),
-                        // Positioned arrow outside the main container
-                        const Positioned(
-                          right: 10,
-                          top: 32,
-                          child: Icon(
-                            Icons.arrow_forward_ios,
-                            size: 18,
-                            color: Colors.purple,
                           ),
                         ),
                       ],
