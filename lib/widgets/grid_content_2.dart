@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class GridContentAfterImage extends StatelessWidget {
-  GridContentAfterImage({super.key});
+class GridContent2 extends StatelessWidget {
+  GridContent2({super.key});
 
   // Define a list of maps for each item with "text" and "icon" keys
   final List<Map<String, dynamic>> gridItems = [
@@ -24,20 +24,19 @@ class GridContentAfterImage extends StatelessWidget {
       itemCount: gridItems.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
+        mainAxisSpacing: 20,
+        crossAxisSpacing: 20,
         childAspectRatio: 1,
       ),
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: const[
+            borderRadius: BorderRadius.circular(5),
+            boxShadow: const [
               BoxShadow(
-                color: Color.fromRGBO(128, 128, 128, 51), 
-                spreadRadius: 2,
-                blurRadius: 3,
+                color: Colors.black,
+                blurRadius: 1,
                 offset: Offset(0, 1),
               ),
             ],
@@ -51,14 +50,14 @@ class GridContentAfterImage extends StatelessWidget {
                   Icon(
                     gridItems[index]["icon"],
                     color: const Color.fromRGBO(143, 39, 143, 1),
-                    size: 20,
+                    size: 25,
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 15),
                   Text(
                     gridItems[index]["text"],
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 9,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

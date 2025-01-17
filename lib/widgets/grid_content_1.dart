@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class GridContent extends StatelessWidget {
-  GridContent({super.key});
+class GridContent1 extends StatelessWidget {
+  GridContent1({super.key});
 
-  // List of grid items with both icon and label defined together
   final List<Map<String, dynamic>> gridItems = [
     {"text": "Linked Bank Acct", "icon": FontAwesomeIcons.house},
     {"text": "Send Money", "icon": FontAwesomeIcons.moneyBillTransfer},
@@ -24,20 +23,19 @@ class GridContent extends StatelessWidget {
       itemCount: gridItems.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
-        mainAxisSpacing: 12,
-        crossAxisSpacing: 10,
+        mainAxisSpacing: 20,
+        crossAxisSpacing: 20,
         childAspectRatio: 1,
       ),
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: const[
+            borderRadius: BorderRadius.circular(5),
+            boxShadow: const [
               BoxShadow(
-                color:Color.fromRGBO(128, 128, 128, 51), // Equivalent to Colors.grey.withOpacity(0.2)
-                spreadRadius: 2,
-                blurRadius: 3,
+                color: Colors.black,
+                blurRadius: 1,
                 offset: Offset(0, 1),
               ),
             ],
@@ -51,14 +49,14 @@ class GridContent extends StatelessWidget {
                   Icon(
                     gridItems[index]["icon"],
                     color: const Color.fromRGBO(143, 39, 143, 1),
-                    size: 20,
+                    size: 25,
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 15),
                   Text(
                     gridItems[index]["text"],
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 9,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

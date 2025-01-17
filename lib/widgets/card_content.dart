@@ -69,7 +69,7 @@ class CardContent extends StatelessWidget {
                       color: Colors.yellow,
                       fontSize: 13,
                     ),
-                    speed: const Duration(milliseconds: 20),
+                    speed: const Duration(milliseconds: 200),
                   ),
                   TypewriterAnimatedText(
                     'Asmare !',
@@ -77,7 +77,7 @@ class CardContent extends StatelessWidget {
                       color: Colors.yellow,
                       fontSize: 13,
                     ),
-                    speed: const Duration(milliseconds: 20),
+                    speed: const Duration(milliseconds: 200),
                   ),
                 ],
               ),

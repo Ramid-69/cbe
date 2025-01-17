@@ -1,12 +1,11 @@
 import 'package:cbe/utils/constants.dart';
-import 'package:cbe/widgets/grid_content_after_image.dart';
-import 'package:cbe/widgets/small_header.dart';
+import 'package:cbe/widgets/grid_content_2.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:cbe/widgets/cbe_card.dart';
-import 'package:cbe/widgets/grid_content.dart';
+import 'package:cbe/widgets/grid_content_1.dart';
 import 'package:cbe/widgets/home_screen_app_bar.dart';
 import 'package:cbe/widgets/image_slider_indicator.dart';
 
@@ -50,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 const HomeAppBar(),
-                 Divider(
+                Divider(
                   color: Constants.white,
                   thickness: 0.2,
                 ),
@@ -73,15 +72,50 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
                           child: Column(
                             children: [
-                              const SmallHeader(
-                                label: 'QUICK ACCESS',
+                              const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Mekedonia",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color:
+                                              Color.fromRGBO(143, 39, 143, 1),
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_right,
+                                        color: Colors.purple,
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Transaction Detail",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color:
+                                              Color.fromRGBO(143, 39, 143, 1),
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_right,
+                                        color: Colors.purple,
+                                      )
+                                    ],
+                                  ),
+                                ],
                               ),
-                              const SmallHeader(
-                                label: 'Transaction Detail',
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                doesItHaveIcon: true,
+                              const SizedBox(
+                                height: 12,
                               ),
-                              GridContent(),
+                              GridContent1(),
                               const SizedBox(
                                 height: 30,
                               ),
@@ -131,8 +165,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 carouselImages: carouselImages,
                                 currentIndex: _currentIndex,
                               ),
-                               GridContentAfterImage(),
-                               const SizedBox(height: 90,),
+                              GridContent2(),
+                              const SizedBox(
+                                height: 90,
+                              ),
                             ],
                           ),
                         ),
